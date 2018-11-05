@@ -1,0 +1,73 @@
+<!--
+// I am committed to being a person of integrity.
+// This project is submitted as part of the assessment for Year 9 IST.
+// This is all my own work. I have referenced any work used from other
+// sources and have not plagiarised the work of others.
+// (signed) ***Arjun Sharma***
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Super Trak 11</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js"></script>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+		<div id="mainOverlay">
+			<div class="suboverlay no-1" id="no-1"> <!--Loading Div-->
+				<h2 id="loading">Loading...</h2>
+			</div>
+			<div class="suboverlay no-2" id="no-2">
+				<h2 id="advising">For the best experience, please use Super Trak 11 in Google Chrome, and full screen.<br>Enjoy!</h2>
+			</div>
+			<div class="suboverlay no-3" onclick="toName()" id="no-3"> <!--Main Screen-->
+			</div>
+			<div class="suboverlay no-4">
+				<h1>What's your name, Racer?</h1>
+				<input id="nameInput" type="text" /><br><br>
+				<button onclick="startGame()">Play!</button><br><br>
+				<h1>Instructions</h1><br>
+				<h3>Simply, Beat the AI Racer! The race is three laps of an indycar style race course.<br>
+					Use the arrow keys to control your car and avoid hitting the sides of the track as they slow down your car!<br>
+					The AI doesn't make any mistakes, so race well!<br>
+					Good luck! (The race starts as soon and you hit the 'Play!' button)</h3>
+			</div>
+		</div>
+		<div id="gameContainer">
+			<canvas id='canvas' width='1243' height='700'></canvas>
+			<canvas style="z-index: 89" id='aiCanvas' width="1243" height='700'></canvas>
+			<script src='script3.js'></script>
+			<h2 id="laps">Lap: 0/3</h2>
+		</div>
+		<div class='suboverlay no-5'>
+			<h1>RESULTS</h1>
+			<table>
+				<tr>
+					<th>Position</th>
+					<th>Name</th>
+					<th></th>
+					<th>Time</th>
+					<th>Points</th>
+				</tr>
+				<tr>
+					<td>1<sup>st</sup></td>
+					<td id="firstPlaceName"></td>
+					<td id="firstPlaceCar"></td>
+					<td id="firstPlaceTime"></td>
+					<td id="firstPlacePoints"></td>
+				</tr>
+				<tr>
+					<td>2<sup>nd</sup></td>
+					<td id="secondPlaceName"></td>
+					<td id="secondPlaceCar"></td>
+					<td id="secondPlaceTime">DNF</td>
+					<td id="secondPlacePoints">0pts</td>
+				</tr>
+			</table>
+			<br>
+			<button onclick="window.location.reload()">Play again?</button>
+		</div>
+	</body>
+</html>
